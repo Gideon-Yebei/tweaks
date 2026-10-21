@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "rogalmic.bash-debug",
+        "shun-fujioka.bash-explainer",
+        "lunaryorn.fish-ide",
+        "ndonfris.fish-lsp",
+        "skyapps.fish-vscode",
+        "foxundermoon.shell-format",
+        "timonwong.shellcheck",
+        "dual.zsh-completion-script",
+        "rogalmic.zsh-debug",
+        "rewdy.zshellcheck",
+        "mads-hartmann.bash-ide-vscode"
+    ]
+}
