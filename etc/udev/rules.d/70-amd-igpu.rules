@@ -1,0 +1,7 @@
+# Map the physical PCIe slot to a persistent symlink (/dev/dri/amd-igpu)
+KERNEL=="card*", KERNELS=="0000:0a:00.0", SUBSYSTEM=="drm", SUBSYSTEMS=="pci", SYMLINK+="dri/amd-igpu"
+
+# Force high-performance power management strictly on this specific AMD iGPU 
+# Options: auto, high, low
+KERNEL=="card*", KERNELS=="0000:0a:00.0", SUBSYSTEM=="drm", SUBSYSTEMS=="pci", ATTR{device/power_dpm_force_performance_level}="auto"
+

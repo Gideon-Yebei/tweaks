@@ -1,0 +1,6 @@
+# NVMe SSDs - Bypass software scheduling for maximum raw throughput
+ACTION=="add|change", KERNEL=="nvme[0-9]*", ENV{DEVTYPE}=="disk", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="none"
+
+# All other drives (SATA SSDs, HDDs, USBs, MMC) - Fallback to ADIOS for adaptive management
+ACTION=="add|change", KERNEL=="sd[a-z]|mmcblk[0-9]*", ENV{DEVTYPE}=="disk", ATTR{queue/scheduler}="adios"
+

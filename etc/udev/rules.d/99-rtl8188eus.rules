@@ -1,0 +1,4 @@
+# Assign a unique, persistent network interface name to the old RTL8188EUS dongle
+# SUBSYSTEM=="net", ACTION=="add", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="8179", NAME="wlan-old"
+# SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="5c:e9:31:2d:6a:f4", NAME="wlan-old"
+SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="5c:e9:31:2d:6a:f4", NAME="wlan-usb"
